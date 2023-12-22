@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-clr: #FBF8CC;
+    --pri-clr: #03045E;
+    --sec-clr: #474306;
+    --btn-clr: #F5EE84;
+}
+
+body {
+    background-color: var(--bg-clr);
+    width: 70vw;
+    margin: 0 auto;
+}
+
+body a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pri-clr);
+    background-color: var(--bg-clr);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0rem 2rem;
+}
+
+nav ul li a {
+    transition: all 1s ease;
+    text-decoration: none;
+    color: var(--pri-clr);
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid var(--pri-clr);
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--pri-clr);
+    transition: all 200ms ease;
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.social-links a:hover {
+    color: rgb(83, 146, 146);
+}
+
+.ham-burger-icon {
+    display: none;
+}
+
+/* Mobile-Nav */
+.mobile-nav {
+    display: none;
+}
+
+/* Main */
+main {
+    height: 91vh;
+    display: flex;
+}
+
+/* Left Div */
+.main-left-div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-left-div p {
+    font-size: 2rem;
+    color: var(--pri-clr);
+}
+
+.main-left-div span {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    line-height: 4rem;
+}
+
+.resume {
+    width: 7.5rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 0.4rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--btn-clr);
+    box-shadow: 5px 5px var(--btn-clr), 5px 5px var(--bg-clr) inset;
+    transition: all 500ms ease;
+}
+
+.resume a {
+    text-decoration: none;
+    color: black;
+}
+
+.resume:hover {
+    box-shadow: none;
+}
+
+/* Right Div */
+.main-right-div {
+    width: 50%;
+    position: relative;
+}
+
+.fill-bg {
+    width: 350px;
+    height: 350px;
+    border-radius: 54% 46% 51% 49% / 51% 44% 56% 49%;
+    background-color: var(--btn-clr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.fill-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.border-only {
+    width: 350px;
+    height: 350px;
+    border: 1px solid var(--sec-clr);
+    border-radius: 54% 46% 51% 49% / 51% 44% 56% 49%;
+    position: absolute;
+    top: 52%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.slant-bar {
+    color: var(--sec-clr);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.plus {
+    color: var(--sec-clr);
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+}
+
+.plus-1 {
+    top: 20%;
+    left: 75%;
+}
+
+.plus-2 {
+    top: 25%;
+    left: 75%;
+}
+
+.plus-3 {
+    top: 23%;
+    left: 70%;
+}
+
+.main-right-div img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* About Me Section */
+.about-me-section {
+    padding-bottom: 5rem;
+}
+
+.about-me {
+    font-size: 2rem;
+    color: var(--sec-clr);
+}
+
+.about-me h2 {
+    display: inline-block;
+    border-bottom: 3px solid var(--sec-clr);
+}
+
+.about-me-des {
+    font-size: 1.3rem;
+    color: var(--pri-clr);
+    padding-top: 1.5rem;
+    padding-right: 9rem;
+}
+
+/* Skill Section */
+.skill-section {
+    padding-bottom: 5rem;
+}
+
+.skill-title {
+    font-size: 2rem;
+    color: var(--sec-clr);
+}
+
+.skill-title h2 {
+    display: inline-block;
+    border-bottom: 3px solid var(--sec-clr);
+}
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skill-list {
+    padding-top: 1rem;
+    display: flex;
+    gap: 10rem;
+    text-align: center;
+}
+
+.skill-list-container {
+    color: var(--pri-clr);
+    font-weight: 600;
+}
+
+#mongoDB {
+    height: 100px;
+}
+
+#videoEditing {
+    height: 100px;
+}
+
+/* Project Section */
+.projects-section {
+    padding-bottom: 5rem;
+}
+
+.projects {
+    font-size: 2rem;
+    color: var(--sec-clr);
+}
+
+.projects h2 {
+    display: inline-block;
+    border-bottom: 3px solid var(--sec-clr);
+}
+
+.projects-list {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.projects-list-container {
+    width: 30%;
+    margin-bottom: 5%;
+    border: 1px solid var(--sec-clr);
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.projects-list-container img {
+    width: 100%;
+}
+
+.project-name {
+    margin: 1rem 0rem;
+    color: var(--pri-clr);
+    font-size: 1.2rem;
+}
+
+.project-link {
+    width: 7.5rem;
+    height: 2.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--btn-clr);
+    box-shadow: 5px 5px var(--btn-clr), 5px 5px var(--bg-clr) inset;
+    transition: all 500ms ease;
+}
+
+.project-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.project-link:hover {
+    box-shadow: none;
+}
+
+/* Contact Section */
+.contact-section {
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section p {
+    font-size: 2rem;
+    color: var(--sec-clr);
+}
+
+.contact-section button {
+    width: 10rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pri-clr);
+    transition: all 500ms ease;
+}
+
+.contact-section a {
+    text-decoration: none;
+    color: var(--btn-clr);
+    font-size: 1.2rem;
+}
+
+.contact-section button:hover {
+    background-color: #2023a2;
+}
+
+/* Copyright Section */
+.copyright-section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    color: var(--pri-clr);
+    text-align: center;
+}
+
+/* Laptop Small Screen */
+@media (max-width: 1025px) {
+    body {
+        width: 90vw;
+    }
+
+    /* Header */
+    header {
+        height: 8vh;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        padding: 0rem 1.5rem;
+    }
+
+    .social-links i {
+        font-size: 1.3rem;
+    }
+
+    /* Main */
+    main {
+        height: 92vh;
+    }
+
+    /* Left Div */
+
+    .main-left-div {
+        gap: 1.5rem;
+    }
+
+    /* Right Div */
+    .fill-bg {
+        width: 320px;
+        height: 320px;
+    }
+
+    .border-only {
+        width: 320px;
+        height: 320px;
+    }
+
+    .slant-bar {
+        font-size: 1.3rem;
+    }
+
+    .plus {
+        font-size: 2.3rem;
+    }
+
+    .plus-1 {
+        top: 20%;
+        left: 78%;
+    }
+
+    .plus-2 {
+        top: 25%;
+        left: 78%;
+    }
+
+    .plus-3 {
+        top: 23%;
+        left: 73%;
+    }
+
+    /* About Me Section */
+    .about-me {
+        font-size: 1.8rem;
+    }
+
+    .about-me-des {
+        padding-right: 5rem;
+    }
+
+    /* Skill Section */
+    .skill-title {
+        font-size: 1.8rem;
+    }
+
+    .skill-list {
+        gap: 6rem;
+    }
+
+    /* Projec Section */
+    .project-name {
+        font-size: 1.1rem;
+    }
+
+    .project-link {
+        width: 7.3rem;
+        height: 2.3rem;
+        padding-top: 0.3rem;
+        box-shadow: 4px 4px var(--btn-clr), 4px 4px var(--bg-clr) inset;
+    }
+
+    /* Contact Section */
+    .contact-section p {
+        font-size: 1.8rem;
+    }
+
+    .contact-section button {
+        width: 9rem;
+    }
+
+    /* Copyright Section */
+
+    .copyright-section {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet Screen */
+@media (max-width: 769px) {
+    /* Header */
+
+    header {
+        height: 8vh;
+    }
+
+    nav ul li {
+        padding: 0rem 1rem;
+    }
+
+    .social-links i {
+        font-size: 1.3rem;
+    }
+
+    /* Main */
+    main {
+        height: 92vh;
+        display: flex;
+    }
+
+    /* Left Div */
+    .main-left-div p {
+        font-size: 1.5rem;
+    }
+
+    .main-left-div span {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .resume {
+        width: 7rem;
+        height: 2rem;
+        padding-top: 0.2rem;
+        box-shadow: 4px 4px var(--btn-clr), 4px 4px var(--bg-clr) inset;
+    }
+
+    /* Right Div */
+    .fill-bg {
+        width: 300px;
+        height: 300px;
+    }
+
+    .border-only {
+        width: 300px;
+        height: 300px;
+    }
+
+    .slant-bar {
+        font-size: 1.2rem;
+        top: 68%;
+        left: 15%;
+    }
+
+    .plus {
+        font-size: 1.8rem;
+    }
+
+    .plus-1 {
+        top: 23%;
+        left: 85%;
+    }
+
+    .plus-2 {
+        top: 28%;
+        left: 85%;
+    }
+
+    .plus-3 {
+        top: 26%;
+        left: 80%;
+    }
+
+    /* About Me Section */
+    .about-me-section {
+        padding-bottom: 4rem;
+    }
+
+    .about-me {
+        font-size: 1.7rem;
+        color: var(--sec-clr);
+    }
+
+    .about-me-des {
+        font-size: 1.1rem;
+        padding-right: 5rem;
+    }
+
+    /* Skill Section */
+    .skill-section {
+        padding-bottom: 4rem;
+    }
+
+    .skill-title {
+        font-size: 1.7rem;
+        color: var(--sec-clr);
+    }
+
+    .skills h3 {
+        font-size: 1rem;
+    }
+
+    .skill-list {
+        gap: 4rem;
+    }
+
+    .skill-list-container p {
+        font-size: 0.8rem;
+    }
+
+    /* Project Section */
+    .projects-section {
+        padding-bottom: 4rem;
+    }
+
+    .projects {
+        font-size: 1.7rem;
+    }
+
+    .projects-list-container {
+        width: 40%;
+    }
+
+    .project-img {
+        height: 20vw;
+    }
+
+    .project-name {
+        font-size: 1.1rem;
+    }
+
+    .project-link {
+        width: 7rem;
+        height: 2rem;
+        padding-top: 0.2rem;
+        box-shadow: 4px 4px var(--btn-clr), 4px 4px var(--bg-clr) inset;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding-bottom: 2.5rem;
+    }
+
+    .contact-section p {
+        font-size: 1.5rem;
+    }
+
+    /* Copyright Section */
+
+    .copyright-section {
+        padding-top: 2.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile Large Screen */
+@media (max-width: 667px) {
+    body {
+        width: 95vw;
+    }
+
+    /* Header */
+    header {
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .ham-burger-icon {
+        display: contents;
+        font-size: 1.5rem;
+    }
+
+    /* Mobile-Nav */
+    .mobile-nav {
+        display: initial;
+        width: 50vw;
+        height: 100vh;
+        background-color: var(--bg-clr);
+        padding: 0 2.5%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 110;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    #toggle-btn:checked~#mobile-nav {
+        transform: translateX(0);
+    }
+
+    .show-nav {
+        transform: translateX(0);
+    }
+
+    .hide-nav {
+        transform: translateX(100%);
+    }
+
+
+    .cross-icon {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        color: var(--pri-clr);
+        font-size: 1.8rem;
+        height: 8vh;
+    }
+
+    .mobile-nav-menu {
+        margin: 2rem 0;
+        font-size: 1.2rem;
+    }
+
+    .mobile-nav-menu ul li {
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    .mobile-nav-menu ul li a {
+        color: var(--pri-clr);
+        text-decoration: none;
+    }
+
+    .mob-social-links {
+        font-size: 1.3rem;
+    }
+
+    .mob-social-links a {
+        color: var(--pri-clr);
+        margin-right: 1rem;
+    }
+
+    /* Main */
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /* Left Div */
+    .main-left-div {
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .resume {
+        margin: 0 auto;
+    }
+
+    /* Right Div */
+    .main-right-div {
+        height: 50vh;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slant-bar {
+        top: 80%;
+        left: 15%;
+    }
+
+    .plus-1 {
+        top: 0%;
+        left: 80%;
+    }
+
+    .plus-2 {
+        top: 7%;
+        left: 80%;
+    }
+
+    .plus-3 {
+        top: 4%;
+        left: 75%;
+    }
+
+    /* About Me Section */
+    .about-me-section {
+        padding-top: 4rem;
+    }
+
+    .about-me {
+        font-size: 1.5rem;
+    }
+
+    .about-me-des {
+        font-size: 1.2rem;
+        padding-right: 0rem;
+    }
+
+    /* Skill Section */
+    .skill-title {
+        font-size: 1.5rem;
+    }
+
+    .skills {
+        margin-top: 1.5rem;
+    }
+
+    .skill-list {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+
+    .skill-list-container {
+        margin-bottom: 5%;
+    }
+
+
+    /* Project Section */
+    .projects-section {
+        padding-bottom: 4rem;
+    }
+
+    .projects {
+        font-size: 1.5rem;
+    }
+
+    .projects-list {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-list-container {
+        width: 90%;
+    }
+
+    .project-img {
+        height: 50vw;
+    }
+
+    .project-name {
+        font-size: 1.1rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section p {
+        font-size: 1.3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .contact-section button {
+        width: 10rem;
+        height: 3rem;
+    }
+
+    /* Copyright Section */
+    .copyright-section {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        color: var(--pri-clr);
+        text-align: center;
+    }
+
+}
+
+
+
+/* Mobile Small Screen */
+@media (max-width: 321px) {
+
+    .fill-bg {
+        width: 275px;
+        height: 275px;
+    }
+
+    .border-only {
+        width: 275px;
+        height: 275px;
+    }
+
+    .projects-list-container {
+        width: 95%;
+    }
+
+     /* Contact Section */
+
+    .contact-section p {
+        font-size: 1.1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .contact-section button {
+        width: 8rem;
+        height: 2.5rem;
+    }
+}
