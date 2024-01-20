@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -92,6 +93,7 @@ nav ul li a:hover {
 main {
     height: 91vh;
     display: flex;
+    scroll-margin: 70px;
 }
 
 /* Left Div */
@@ -279,6 +281,7 @@ main {
 /* Project Section */
 .projects-section {
     padding-bottom: 5rem;
+    scroll-margin: 70px;
 }
 
 .projects {
