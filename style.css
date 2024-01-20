@@ -220,6 +220,7 @@ main {
 /* About Me Section */
 .about-me-section {
     padding-bottom: 5rem;
+    scroll-margin: 70px;
 }
 
 .about-me {
